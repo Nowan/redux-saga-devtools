@@ -1,4 +1,4 @@
-import { asEffect } from "redux-saga/utils";
+import asEffect from "../utils/asEffect";
 import { combineReducers } from "redux";
 import {
   EFFECT_TRIGGERED,
@@ -20,7 +20,7 @@ function getPathToEffect(effect, effectsById) {
   const path = [effectId];
 
   while (effectId) {
-    effectId = effect.parentEffectId;
+    effectId = effect && effect.parentEffectId;
     if (effectId) {
       path.push(effectId);
       effect = effectsById[effectId];

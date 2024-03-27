@@ -1,5 +1,6 @@
 import React from 'react'
-import { is, CHANNEL_END } from 'redux-saga/utils'
+import * as is from '@redux-saga/is'
+import { CHANNEL_END_TYPE } from '@redux-saga/symbols'
 import JSValue from '../JSValue'
 import SagaRef from '../../containers/SagaRef'
 
@@ -7,7 +8,7 @@ export default function SagaValue({value, label, isIdentifier}) {
   if(is.channel(value)) {
     return <SagaRef object={value}>{label || 'Channel'}</SagaRef>
   }
-  else if(CHANNEL_END && value === CHANNEL_END) {
+  else if(CHANNEL_END_TYPE && value === CHANNEL_END_TYPE) {
     return <JSValue value={'END'} isIdentifier={true} />
   }
   else {

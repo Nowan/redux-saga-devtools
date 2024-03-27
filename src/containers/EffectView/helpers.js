@@ -1,5 +1,3 @@
-import { is, asEffect } from 'redux-saga/utils'
-
 export function pathHasChanged(currentPath, newPath) {
   if(
     (!currentPath && newPath)  ||

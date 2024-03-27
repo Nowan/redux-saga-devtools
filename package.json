@@ -1,6 +1,6 @@
 {
   "name": "redux-saga-devtools",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Monitor and UI for redux-saga",
   "main": "lib/index.js",
   "devDependencies": {
@@ -16,10 +16,12 @@
     "cross-env": "^3.1.3",
     "eslint": "^4.11.0",
     "jest": "^24.9.0",
-    "parcel": "^1.12.4",
+    "parcel": "1.12.3",
     "react-redux": "^5.0.0",
     "redux": "^3.6.0",
-    "redux-saga": "^0.16.0",
+    "redux-saga": "^1.0.0",
+    "@redux-saga/is": "^1.0.0",
+    "@redux-saga/symbols": "^1.0.0",
     "regenerator-runtime": "^0.13.3",
     "rimraf": "^2.5.4",
     "tap-spec": "^4.1.1"
@@ -32,7 +34,9 @@
     "styled-components": "^2.2.4"
   },
   "peerDependecies": {
-    "redux-saga": "^0.15.6"
+    "redux-saga": "^1.0.0",
+    "@redux-saga/is": "^1.0.0",
+    "@redux-saga/symbols": "^1.0.0"
   },
   "scripts": {
     "lint": "eslint src",

@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import React from 'react';
 import styled from 'styled-components'
-import { is, asEffect } from 'redux-saga/utils'
+import * as is from '@redux-saga/is'
+import asEffect from '../../utils/asEffect';
 import { Row, Cell } from '../Layout'
 import SagaValue from '../SagaValue'
 import Result from './Result'
-
 
 const EffectType = styled.span`
   color: ${props => props.theme.effectType};

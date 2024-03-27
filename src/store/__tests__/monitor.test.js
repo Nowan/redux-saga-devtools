@@ -1,7 +1,8 @@
-import { asEffect, SAGA_ACTION } from "redux-saga/utils";
 import createSagaMonitor from "../createSagaMonitor";
+import { SAGA_ACTION } from "@redux-saga/symbols";
 import { CHILDREN } from "../reducers";
 import * as c from "../constants";
+import asEffect from "../../utils/asEffect";
 
 asEffect.race = eff => {
   return eff.race;

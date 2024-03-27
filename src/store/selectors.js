@@ -1,4 +1,5 @@
-import { is, asEffect } from 'redux-saga/utils'
+import * as is from '@redux-saga/is'
+import asEffect from '../utils/asEffect'
 import { STATUS_RESOLVED } from './constants'
 
 /* eslint-disable no-cond-assign */

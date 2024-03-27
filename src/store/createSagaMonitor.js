@@ -1,4 +1,5 @@
-import { is, SAGA_ACTION } from 'redux-saga/utils'
+import * as is from '@redux-saga/is'
+import { SAGA_ACTION } from '@redux-saga/symbols'
 import { createStore } from 'redux'
 import rootReducer from './reducers'
 import {
@@ -37,7 +38,7 @@ export default function createSagaMonitor({time = getTime, dispatch: customDispa
 
   function effectResolved(effectId, result) {
     if(is.task(result)) {
-      result.done.then(
+      result.toPromise().then(
         taskResult => {
           if(result.isCancelled())
             effectCancelled(effectId)
